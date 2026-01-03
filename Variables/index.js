@@ -30,6 +30,26 @@ console.log(typeof age)
 
 //* String data type
 
+let firstname = "Kunal";
+let favouritefood = 'Pizza';
+let email = "Kunal@gmail.com"
+
+console.log(typeof firstname);
+console.log(`Your name is : ${firstname}`);
+console.log(`You like ${favouritefood}`);
+console.log(`Your email is ${email}`);
+
+//* Booleans
+let online = true;
+let forSale = false;
+let isStudent = true;
+
+console.log(typeof online);
+console.log(`Kunal is online ${online}`);
+console.log(`Is this car for sale ? ${forSale}`);
+console.log(`Enrolled: ${isStudent}`);
+
+
 
 
 
