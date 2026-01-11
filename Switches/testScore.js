@@ -8,6 +8,16 @@ switch(true){
     case testScore >= 80:
         letterGrade = 'B'
         break;
-    case testScore
+    case testScore >= 70:
+        letterGrade = 'C';
+        break;
+    case testScore >= 60:
+        letterGrade = 'D';
+        break;
+    default:
+        letterGrade = 'F'
+
+
 
 }
+console.log(letterGrade);
