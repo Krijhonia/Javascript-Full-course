@@ -1,0 +1,112 @@
+/* -----------------------------
+   Dice Roller — Modern Styles
+   ----------------------------- */
+:root{
+    --bg1: #eef2ff;
+    --card: #ffffff;
+    --accent: #3b82f6; /* blue-500 */
+    --accent-dark: #2563eb;
+    --muted: #6b7280;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,var(--bg1),#f8fafc);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    color:#111827;
+}
+
+#container{
+    width: min(720px, 94%);
+    background: var(--card);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 30px rgba(17,24,39,0.08);
+    text-align: center;
+}
+
+h1{
+    margin:0 0 12px 0;
+    font-size:1.75rem;
+    letter-spacing:-0.5px;
+    color:#0f172a;
+}
+
+/* Controls layout */
+#container > label,
+#container > input,
+#container > button{
+    vertical-align: middle;
+    margin: 0 8px;
+}
+
+label{
+    font-size:1rem;
+    color:var(--muted);
+}
+
+input[type="number"]{
+    font-size:1.125rem;
+    width:120px;
+    padding:10px 12px;
+    text-align:center;
+    border-radius:10px;
+    border:1px solid #e6e9ef;
+    outline:none;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.02);
+    transition: box-shadow .15s ease, transform .08s ease, border-color .15s ease;
+}
+input[type="number"]:focus{
+    border-color: var(--accent);
+    box-shadow: 0 6px 18px rgba(59,130,246,0.12);
+    transform: translateY(-1px);
+}
+
+button{
+    font-size:1rem;
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    background: linear-gradient(180deg,var(--accent),var(--accent-dark));
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow: 0 6px 18px rgba(37,99,235,0.18);
+    transition: transform .08s ease, box-shadow .12s ease, opacity .12s ease;
+}
+button:hover{ transform: translateY(-2px); box-shadow: 0 10px 25px rgba(37,99,235,0.22); }
+button:active{ transform: translateY(0); opacity:0.95; box-shadow: 0 6px 18px rgba(37,99,235,0.16); }
+
+#diceResult{
+    margin: 18px 0;
+    font-size:1.125rem;
+    color:#0f172a;
+}
+
+#diceImages{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:12px;
+}
+#diceImages img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    border-radius:8px;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+    transition: transform .12s ease, filter .12s ease;
+}
+#diceImages img:hover{ transform: translateY(-6px) scale(1.03); filter: drop-shadow(0 6px 18px rgba(0,0,0,0.08)); }
+
+@media (max-width:420px){
+    h1{ font-size:1.25rem; }
+    #diceImages img{ width:90px; height:90px; }
+    input[type="number"]{ width:100px; }
+}
